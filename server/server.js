@@ -31,7 +31,7 @@ app.get('/',function(req, res){
 });
 
 
-mongoose.connect ( 'mongodb://localhost:27017/cafeteria',{
+mongoose.connect ( 'mongodb+srv://emilio_19:123456789emilio@cluster0.qih2d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
@@ -49,8 +49,9 @@ app.use(require('./routes/login'));
 
 app.use(require('./routes/producto')); 
 
-
+//app.listen(3000, () => {
+  //console.log('el servidor esta en linea por el puerto ');
 
 app.listen(process.env.PORT, () => {
   console.log('el servidor esta en linea por el puerto ',process.env.PORT); 
-});  
+}); 
